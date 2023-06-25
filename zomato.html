@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Zomato.css">
+	<script src="https://kit.fontawesome.com/deffb8bb45.js" crossorigin="anonymous"></script>
+	<title>Zomato website</title>
+</head>
+<body style="margin: 0;">
+	<div class="whole_bdy">
+		<div class="search_box">
+			<div class="headr">
+				<div class="zomato_logo">
+					<img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" style="width: 82%;">
+				</div>
+				<div class="left_srch" style="border-right-color: white;">
+					<i class="fas fa-map-marker-alt location_icon" title="Location fill"></i>
+					<input type="text" name="" class="left_input" placeholder="Ywca,1,Ashoka Rd,Hanu">
+					<select class="location_selector">
+						<option></option>
+					</select>
+				</div>
+				<div class="right_srch" style="border-left-color: white;">
+					<button class="srch_btn"><i class="fas fa-search srch_icon"></i></button>
+					
+					<input type="text" name="" class="right_input" id="srch" oninput=invokingOnInputEvent() placeholder="Search for restaurant, cuisine or a dish">
+				</div>
+
+				<div style="width: 13%;">
+					<a href="" class="log_in_status">Log in</a>
+				</div>
+				<div style="width: 9%;">
+					<a href="" class="log_in_status">Sign up</a>
+				</div>
+			</div>
+		</div>	
+		<div style="margin-top: 2.3%;">
+			<a href="" class="hdr_links">Home</a>
+			<span>/</span>
+			<a href="" class="hdr_links">India</a>
+			<span>/</span>
+			<span>Delhi NCR Restaurants</span>
+		</div>
+		<div style="display: flex;margin-top: 2%;">
+			<div class="btm_border">
+				<a href="" style="text-decoration: none;">
+					<div class="current_content">
+						<div class="links_icon">
+							<img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png" style="width: 100%;">
+						</div>
+						<span class="links_font">Delivery</span>
+					</div>
+				</a>
+			</div>
+			<div class="inactive_btm_border">
+				<a href="" style="text-decoration: none;">
+					<div class="inactive_current_content">
+						<div class="inactive_links_icon">
+							<img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png?output-format=webp" style="width: 100%;">
+						</div>
+						<span class="inactive_links_font">Dining Out</span>
+					</div>
+				</a>
+			</div>
+			<div>
+				<a href="" style="text-decoration: none;">
+					<div class="inactive_current_content">
+						<div class="inactive_links_icon">
+							<img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png?output-format=webp" style="width: 100%;">
+						</div>
+						<span class="inactive_links_font">Nightlife</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<hr style="margin-top: 0%;">
+	</div>
+	<div class="pstion_sticky">
+		<div class="position_sticky">
+			<div style="width: 8%;font-size: 17px;" class="filters">
+				<a href="" class="filter_links">
+					<div class="filter_box">
+						<i class="fas fa-air-freshener"></i>
+						<span>Filters</span>
+					</div>
+				</a>
+			</div>
+			<div style="width: 12%;" class="filters">
+				<a href="" class="filter_links">
+					<div class="filter_box" style="padding: 5% 0 6% 8%;">
+						<i class="fas fa-stopwatch"></i>
+						<span>Delivery Time</span>
+					</div>
+				</a>
+			</div>
+			<div class="filters" style="width: 7%;">
+				<a href="" class="filter_links">
+					<div class="filter_box" style="padding: 9% 0 10% 12%;">
+						<span>Pure Veg</span>
+					</div>
+				</a>
+			</div>
+			<div class="filters">
+				<a href="" class="filter_links">
+					<div class="filter_box" style="padding: 7% 0 8% 11%;">
+						<span>Rating 4.0+</span>
+					</div>
+				</a>
+			</div>
+			<div class="filters">
+				<a href="" class="filter_links">
+					<div class="filter_box" style="padding: 7% 0 8% 9%;">
+						<span>Great Offers</span>
+					</div>
+				</a>
+			</div>
+			<div class="filters" onclick="Cuisines_box()">
+				<div class="filter_box">
+					<span>Cuisines</span>
+					<button class="down_button"><i class="fas fa-angle-down"></i></button>
+				</div>
+			</div>
+			<div class="display_cuisines" id="Cuisns" onmouseout="hide_cuisines(this)" onmouseover="show_cuisines(this)">
+				<h3 class="cuisine_heading">Cuisines</h3>
+				<div class="cuisine_srch_box">
+					<div class="cuisine_srch_icon">
+						<i class="fas fa-search"></i>
+					</div>
+					<input type="text" name="" placeholder="Search here" class="srch_here">
+					<div class="cuisine_cross_icon">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class="checkboxes">
+					<table style="width: 90%;margin-left: 5%;">
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Afghan</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>African</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>American</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Andhra</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Arabian</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Asian</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>BBQ</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Bakery</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Bangladeshi</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Belgian</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Bengali</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Burger</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Charcoal Chicken</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Chinese</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Coffee</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Desserts</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Egyptian</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>European</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>Finger Food</p>
+									</div>
+								</div>
+							</td>
+							<td class="checkbox_data">
+								<div style="display: flex;">
+									<div class="checkbox_div">
+										<input type="checkbox" name="" class="check_box">
+									</div>
+									<div>
+										<p>French</p>
+									</div>
+								</div>
+							</td>
+						</tr>						
+					</table>
+				</div>
+				<hr style="margin: 4% 0 3% 0">
+				<div style="display: flex;margin: 1% 0 4% 0;">
+					<div class="clr_all_div">
+						<button class="btn_clr_all">Clear all</button>
+					</div>
+					<div style="width: 20%;">
+						<button class="apply_btn">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 0 13%;background: rgb(248, 248, 248);">
+		<div style="padding: 1% 0 3% 0;">
+			<h2 style="font-size: 30px;">Inspiration for your first order</h2>
+			<div style="display: flex;">
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/homepage_dish_data/4/7cf2db5ec261a0fa27a502d3196a6f60.png" class="Inspiration_img" id="dish1">
+						<p class="Inspiration_name" id="dish1_name">Pizza</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" class="Inspiration_img" id="dish2">
+						<p class="Inspiration_name" id="dish2_name">Burger</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" class="Inspiration_img" id="dish3">
+						<p class="Inspiration_name" id="dish3_name">Rolls</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/homepage_dish_data/2/78261817faa51e9456cfab592c189a62.png" class="Inspiration_img" id="dish4">
+						<p class="Inspiration_name" id="dish4_name">Cake</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png" class="Inspiration_img" id="dish5">
+						<p class="Inspiration_name" id="dish5_name">Biryani</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<img src="https://b.zmtcdn.com/data/homepage_dish_data/4/d9452952b432b35d1019ada01cedce7f.png" class="Inspiration_img" id="dish6">
+						<p class="Inspiration_name" id="dish6_name">Chaat</p>
+					</a>
+				</div>
+				<div>
+					<button class="forward_btn" id="frwd_btn" onclick="display_next(this)">></button>
+				</div>
+				<div>
+					<button class="backward_btn" id="bckwrd_btn" onclick="display_prev(this)"><</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 0 13%;">
+		<div style="padding: 1% 0 3% 0;">
+			<h2 style="font-size: 30px;">Top brands for you</h2>
+			<div style="display: flex;">
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container">
+							<img src="https://b.zmtcdn.com/data/brand_creatives/logos/1a985408ca7ad8fd097f2c47db9c5cb6_1611252699.png?output-format=webp" class="Topbrand_img" id="brand1">
+						</div>
+						<p class="Topbrand_name" id="brand1_name">Domino's Pizza</p>
+						<p class="Topbrand_time">36 min</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container" style="background-color: rgb(255, 188, 13);">
+							<img src="https://b.zmtcdn.com/data/brand_creatives/logos/bb30587d1148b6ab628a61945f64bf88_1625164768.png?output-format=webp" class="Topbrand_img" id="brand2">
+						</div>
+						<p class="Topbrand_name" id="brand2_name">McDonald's</p>
+						<p class="Topbrand_time">25 min</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container">
+							<img src="https://b.zmtcdn.com/data/brand_creatives/logos/6a11fd0f30c9fd9ceaff2f5b21f61d23_1617187857.png?output-format=webp" class="Topbrand_img" id="brand3">
+						</div>
+						<p class="Topbrand_name" id="brand3_name">Burger King</p>
+						<p class="Topbrand_time">32 min</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container">
+							<img src="https://b.zmtcdn.com/data/brand_creatives/logos/466f8fc74274145f3b21795c3d21816d_1589433692.png?output-format=webp" class="Topbrand_img" id="brand4">
+						</div>
+						<p class="Topbrand_name" id="brand4_name">KFC</p>
+						<p class="Topbrand_time">28 min</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container">
+							<img src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png" class="Topbrand_img" id="brand5">
+						</div>
+						<p class="Topbrand_name" id="brand5_name">subway</p>
+						<p class="Topbrand_time">30 min</p>
+					</a>
+				</div>
+				<div class="Inspiration_for_1storder">
+					<a href="" class="Inspiration_link">
+						<div class="dish_container">
+							<img src="https://b.zmtcdn.com/data/brand_creatives/logos/396a89cdb1f7a999717b01aa98da7017_1631990846.png?output-format=webp" class="Topbrand_img" id="brand6">
+						</div>
+						<p class="Topbrand_name" id="brand6_name">Haldiram's</p>
+						<p class="Topbrand_time">36 min</p>
+					</a>
+				</div>
+				<div>
+					<button class="forward_btn" id="next_brand" onclick="NextBrand(this)">></button>
+				</div>
+				<div>
+					<button class="backward_btn" id="prev_brand" onclick="PreviousBrand(this)"><</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 0 13%;">
+		<h3 style="font-size: 30px;margin: 0;">Delivery Restaurants in Delhi NCR</h3>
+		<div style="display: flex;margin-top: 4%;">
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/7/18535157/429ec6ddd1350367aae4aea48a031ece_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Hussaini Hotel</h4>
+						<button class="rating_btn">
+							<span>4.0</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Mughlai</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">2100+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/3/143/3c133139838c2777cdcc0514147373b4_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Domino's Pizza</h4>
+						<button class="rating_btn">
+							<span>4.2</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Pizza,Fast Food, Desert...</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">7475+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/7/19413947/7c7b14ad7f1abdbab8bf7fbcc3b44868_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Canteen Central - Burgers</h4>
+						<button class="rating_btn">
+							<span>3.7</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>North Indian,Fast Food</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">2100+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div style="display: flex;margin-top: 4%;">
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/1/171/0094c2b5485c4c2f52c931306442269b_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">McDonald's</h4>
+						<button class="rating_btn">
+							<span>4.3</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Burger,Fast Food</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">2650+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/3/593/f3f815f13c04ff1ea8bf82a6bd316448_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Cafe Coffee Day</h4>
+						<button class="rating_btn">
+							<span>3.8</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Cafe,Fast Food,Desserts</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">7475+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/0/550/a915df22032cd899f9cab92e1bb57c8c_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Haldiram's</h4>
+						<button class="rating_btn">
+							<span>4.0</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>South Indian,Mithai</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">1550+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div style="display: flex;margin-top: 4%;">
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/8/18617948/3436002883bfa5563d06ecd7b9026e79_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">AKU'S - The Burger Co.</h4>
+						<button class="rating_btn">
+							<span>4.3</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Burger,Healthy Food</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">2100+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/chains/9/899/6812b7d6166430abf0f62016ea8fe548_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">Saravana Bhavan</h4>
+						<button class="rating_btn">
+							<span>4.2</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>South Indian,Beverages...</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">7475+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+			<div class="food_discreption">
+				<a href="" class="dishes_anchor">
+					<div class="diff_dishes">
+						<div class="dishes_img">
+							<img src="https://b.zmtcdn.com/data/pictures/9/18451269/26c9abe86154029e41059273d16bfdfb_o2_featured_v2.jpg?output-format=webp" class="dishes_img_dimension">
+						</div>
+					</div>
+					<div style="display: flex;">
+						<h4 class="dish_name">TukTuk - Asian on Wheels</h4>
+						<button class="rating_btn">
+							<span>4.2</span>
+							<i class="fas fa-star star_symbol"></i>
+						</button>
+					</div>
+					<div style="font-size: 17px;color: black;">
+						<span>Chinese,Asian,Thai</span>
+						<span style="float: right;">₹100 for one</span>
+					</div>
+					<hr>
+					<div style="margin-bottom: 5%;">
+						<img src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp" style="width: 5%;margin-top: 2%;">
+						<span style="padding-left: 5%;font-size: 17px;">2100+ orders placed from here recently</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div style="display: flex;margin: 4% 30%;">
+		<div class="end_of_srch">
+			<h2>End of search results</h2>
+		</div>
+		<div class="end_result_img">
+			<img src="https://b.zmtcdn.com/web/assets/search/6d548ba48f0e4e4b46c19ad4b15a3f011615379209.jpeg" style="width: 75%;">
+		</div>
+	</div>
+	<div style="padding: 0 13%;background: rgb(232 236 236);">
+		<h2 class="explr_oth_opt">Explore other options for you here</h2>
+		<div>
+			<h3 class="Heading_for_othr_opt">Popular cuisines near me</h3>
+			<div>
+				<a href="" class="Puplr_cuisines">Bakery food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Beverages food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Biryani food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Burger food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Chinese food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Continental food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Desserts food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Ice Cream food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Italian food near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Kebab food near me</a>
+			</div>
+		</div>
+		<div>
+			<h3 class="Heading_for_othr_opt">Popular restaurant types near me</h3>
+			<div>
+				<a href="" class="Puplr_cuisines">Bakeries near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Bars near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Beverage Shops near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Bhojanalya near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Cafes near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Casual Dining near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Clubs near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Cocktail Bars near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Confectioneries near me</a>
+				<span class="dot_in_cuisines">.</span>
+				<a href="" class="Puplr_cuisines">Dessert Parlors near me</a>
+			</div>
+		</div>
+		<div>
+			<h3 class="Heading_for_othr_opt">Casual Dining Restaurants Near Me</h3>
+			<p style="font-size: 19px;color: #928f8f;">Find the best Casual Dining Restaurants near your location. Discover various Grills, Barbecues, Mocktails, Desserts, Soups and salads serving<br>Casual Dining Restaurants around you. Whether it’s Grilled Cheese Sandwich or Virgin Mojito, we have got you covered.<br>Discover all Casual Dining Restaurants close to you to enjoy delicious food in casual atmosphere.<br>Most popular Casual Dining Items: Grills, Barbecues, Mocktails, Desserts, Soups and Salads
+			</p>
+		</div>
+		<div>
+			<h3 class="Heading_for_othr_opt">Top Restaurant Chains</h3>
+			<table style="width: 100%;">
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Bikanervala</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Biryani Blues</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">BTW</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Burger King</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Burger Singh</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Domino's</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Dunkin' Donuts</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Faasos</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Haldiram's</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">KFC</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Krispy Kreme</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">McDonald's</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Moti Mahal Delux</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Om Sweets & Snacks</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Paradise Biryani</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Pizza Hut</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Sagar Ratna</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Subway</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">WOW! Momo</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links"></a></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<h3 class="Heading_for_othr_opt">Cities We Deliver To</h3>
+			<table style="width: 100%;">
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Delhi NCR</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Kolkata</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Mumbai</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Bengaluru</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Pune</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Hyderabad</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Chennai</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Lucknow</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Kochi</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Jaipur</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Ahmedabad</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Chandigarh</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Goa</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Indore</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Nashik</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Ooty</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Shimla</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Ludhiana</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Guwahati</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Amritsar</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Kanpur</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Allahabad</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Aurangabad</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Bhopal</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Ranchi</a></td>
+				</tr>
+				<tr class="tbl_row">
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Visakhapatnam</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Bhubaneswar</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Coimbatore</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Mangalor</a></td>
+					<td class="tbl_data"><a href="" class="top_restrunt_links">Vadodara</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div style="padding: 0 13%;background: rgb(232 236 236);">
+		<div style="padding: 4% 0;">
+			<div style="display: flex;padding-bottom: 2%;">
+				<div class="zomato_imgin_ftr">
+					<img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" style="width: 70%;">
+				</div>
+				<div class="cntry_details" onclick="other_country()">
+					<div style="display: flex;">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAmVBMVEX/mTMSiAf/////lycAgQAAAIgAAIUAAH4AAIIAAIMAAHwAAHPi4u+kpMvz8/kAAHjn5/Lt7fXd3ey5uddPT6GZmcWDg7n6+v7Ly+HIyOJERJxlZao+PponJ5L29vy0tNbW1uggIJCfn8iGhrsYGJBNTaB2drQQEIx+fripqc5ra62QkMBXV6QiIpFfX6i+vtwyMpw6Opg1NZe0gadDAAAEvUlEQVR4nO3ba3OiSBiG4UzvdDcip8YDiAdQZAIxExP//4/btzHjZH1Nze6HpVPlc1Ul0eiH9g7Q2JKHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/+gvuPYg4BqacGjCoQmHJhyacF+hSTI5LFd7uV8tD5PE9WDEF2gSHNbaGyklpVRq5Omfh8D1kBw3qaZ6pCiGVFrr/oYc6SZ3OyinTZIpdZCeevnhNyY1jf/jRXm0vejG6S7kssnObhmeNxMbcTSiEuZIt2aeZ7eancNxOWzy7NFrn3cnI/p9pbTfcmFO3ZxaeVN3A3PWJNrS5lAEmb3d5wgvt7KgoMe2kauhuWoSPdK2QHvIwt5ZpPTtQF/p+S7tVbQNPbqK4qhJRluJ17VGZB3di2yPF/o62AxdJkzbUZRt5mZwjpo0lOTY3wrtFGMPHq/vP5N+JxJHiuLomOKmycyTXinOUewLX1IYSTmW7/cpiSjpOTMno3PSJNA049TnQ4gIae8J6cVrSkWbSNdvJvRITbOPdnJO66RJo1QzM3RjaY8YMhLVVmR+JraViGhzEZn9vZnZp7kYnosmCy31+UR180oH1a4QWWyiODJxJhqajaPTpn80oee5OM130WSlVL3pZ11hJO0daiLWITUJ12KiaM+Spn9ssamVKhyMz0GTVNsDrOi6/o5fiVKLdmVis2qFLkXl27OV/rhCh1mdDj9AB01qmoftnz+Z2ir5+Cjk08JP49RfPElxHNvdpZvao2vhyVE9/AAdNHmkOfZ8ihpK2l4m4y4fJ7ryKp2M8248oe1D7vrHDc3Z++EHOHwTmojlr9tRISciHB/beZ3v87puj+OdmMiV+fUE6WI6Hr5J6amnaFEuzptK6av8GAfrKmzDah3Ex/zR798Iik1e5tGT8srBRzh8k7lSLf1ID9NlWNF5yHLcBuugLd6KNl0H87E9N0m7p+Zgj66tUvPBRzh8k2cl/fNZRzLbxut2kczXaWFXIEdFsG6TfH6KH2fnPSb3pXoefITDN3lVanpZBTDhytd12o6kNWrTg/ZPu8vKYzRV6nXwEQ7fRErvkiSLIpNWeViovokqdnmVmii6LBJE3u8D8mCcNEmqYzhbnqT2/TiOvX37Js/e6q1Hv4l9LX8+H8IyT++mCbaTK1fHkzccTz7OO8Hveafp550mWM/vct6Zn085cH7ywe3z2JTOY9O7PY/F+50b9vS++PyiP3tfPLm398WiHv15/aTs109Wd7N+gnW2G4p/uR6b3c96rMiv1u2bT9btgztat+8/3zmY989xbn6+I+7t8x18DngLPi++YYrrChhcf3IDrlO6IdqOpCpSXM/2D/11j234yXWPwy+bXOD6WO5rXkc9vdvrqAWut78N/5dx08f/3zF/fvr/7is0+WrQhEMTDk04NOHQhHv4DtcevsE1NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMT7m/cNifkUwM0UQAAAABJRU5ErkJggg==" class="your_cntryflag">
+						<p class="Country">India</p>
+						<span style="margin-top: 9%;"><i class="fas fa-chevron-down"></i></span>
+						<div id="othr_cuntry" style="display: none;" onmouseout="hide_countries(this)" onmouseover="show_countries(this)" class="countries">
+							<table>
+								<tr>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag"></div>
+												<div>
+													<p class="cntry_name">India</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -752px;"></div>
+												<div>
+													<p class="cntry_name" style="margin-top: 9%;">Australia</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -846px;"></div>
+												<div>
+													<p class="cntry_name">Brazil</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -188px;"></div>
+												<div>
+													<p class="cntry_name">Canada</p>
+												</div>
+											</div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -235px;"></div>
+												<div>
+													<p class="cntry_name">Chile</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -564px;"></div>
+												<div>
+													<p class="cntry_name">Cz Republic</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -940px;"></div>
+												<div>
+													<p class="cntry_name">Indonesia</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -423px;"></div>
+												<div>
+													<p class="cntry_name">Ireland</p>
+												</div>
+											</div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -1034px;"></div>
+												<div>
+													<p class="cntry_name">Italy</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -987px;"></div>
+												<div>
+													<p class="cntry_name">Lebanon</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: 0px;"></div>
+												<div>
+													<p class="cntry_name">Malaysia</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -329px;"></div>
+												<div>
+													<p class="cntry_name">New Zealand</p>
+												</div>
+											</div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -611px;"></div>
+												<div>
+													<p class="cntry_name">Singapore</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -799px;"></div>
+												<div>
+													<p class="cntry_name">Slovakia</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -376px;"></div>
+												<div>
+													<p class="cntry_name">South Africa</p>
+												</div>
+											</div>
+										</a>
+									</td>
+									<td class="cntry_data">
+										<a href="">
+											<div style="display: flex;">
+												<div class="cntry_flag" style="background-position: -94px;"></div>
+												<div>
+													<p class="cntry_name">Sri Lanka</p>
+												</div>
+											</div>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="Language_selector" onclick="display_language()">
+					<div style="display: flex;">
+						<img src="https://image.shutterstock.com/image-vector/globe-icon-world-symbol-round-260nw-658272040.jpg" style="width: 18%;padding: 3% 1% 4% 4%;">
+						<p class="Language">English</p>
+						<span style="margin-top: 7%;"><i class="fas fa-chevron-down"></i></span>
+						<div class="chose_lang" id="chose_language" onmouseout="hide_language(this)" onmouseover="show_language(this)">
+							<a href="" class="diff_language">English</a>
+							<a href="" class="diff_language">Türkçe</a>
+							<a href="" class="diff_language">हिंदी</a>
+							<a href="" class="diff_language">Português (BR)</a>
+							<a href="" class="diff_language">Indonesian</a>
+							<a href="" class="diff_language">Português (PT)</a>
+							<a href="" class="diff_language">Español</a>
+							<a href="" class="diff_language">Čeština</a>
+							<a href="" class="diff_language">Slovenčina</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="display: flex;">
+				<div style="width: 80%;">
+					<table style="width: 100%">
+						<tr>
+							<td class="footer_tbl_data"><h4 class="footer_data_link">COMPANY</h4></td>
+							<td class="footer_tbl_data"><h4 class="footer_data_link">FOR FOODIES</h4></td>
+							<td class="footer_tbl_3"><h4 class="footer_data_link">FOR RESTAURANTS</h4></td>
+							<td class="footer_tbl_4"><h4 class="footer_data_link">FOR YOU</h4></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Who We Are</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Code of Conduct</a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link">Add restaurant</a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link">Privacy</a></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Blog</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Community</a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link"></a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link">Terms</a></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Careers</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Blogger Help</a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link"><h3 style="margin: 1% 0;">FOR ENTERPRISE</h3></a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link">Security</a></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Report Fraud</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Mobile Apps</a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link">Zomato for Work</a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link">Sitemap</a></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Contact</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link"></a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link"></a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link"></a></td>
+						</tr>
+						<tr>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link">Investor Relations</a></td>
+							<td class="footer_tbl_data"><a href="" class="footer_data_link"></a></td>
+							<td class="footer_tbl_3"><a href="" class="footer_data_link"></a></td>
+							<td class="footer_tbl_4"><a href="" class="footer_data_link"></a></td>
+						</tr>
+					</table>
+				</div>
+				<div style="width: 20%;">
+					<h3>SOCIAL LINKS</h3>
+					<div style="margin-left: 8%;">
+						<a href="" class="socl_media_icon"><i class="fab fa-facebook-square social_media_icon"></i></a>
+						<a href="" class="socl_media_icon"><i class="fab fa-twitter-square social_media_icon"></i></a>
+						<a href="" class="socl_media_icon"><i class="fab fa-instagram-square social_media_icon"></i></a>
+					</div>
+					<div>
+						<img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" style="width: 55%;margin-top: 10%;">
+					</div>
+					<div>
+						<img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" style="width: 55%;margin-top: 6%;">
+					</div>
+				</div>
+			</div>
+			<hr style="margin-top: 4.5%;">
+			<div>
+				<p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2022 © Zomato™ Ltd. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="zomato_backend.js"></script>
+
+</body>
+</html>
